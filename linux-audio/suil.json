@@ -1,0 +1,24 @@
+{
+      "name": "suil",
+      "buildsystem": "meson",
+      "cleanup": [
+        "/include",
+        "/lib/pkgconfig"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://download.drobilla.net/suil-0.10.26.tar.xz",
+          "sha256": "62808916602c47d201a1ec2d246323a8048243f2bf972f859f0db1db4662ee43"
+        }
+      ],
+      "post-install": [
+        "install -Dm644 -t /app/share/licenses/suil ../COPYING"
+      ],
+      "cleanup": [
+        "/bin",
+        "/etc",
+        "/include",
+        "/share/man"
+      ]
+}
